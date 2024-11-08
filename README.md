@@ -9,7 +9,6 @@ A customizable API dashboard that provides real-time weather updates, random ima
 - [Technologies Used](#technologies-used)
 - [Setup and Installation](#setup-and-installation)
 - [Usage](#usage)
-- [Screenshots](#screenshots)
 - [Future Improvements](#future-improvements)
 - [License](#license)
 
@@ -80,11 +79,6 @@ api-dashboard/
   - Click "Save changes" to apply and save preferences.
   
 - **Drag-and-Drop**: Rearrange modules by dragging them. The arrangement is saved in `localStorage`.
-
-## Screenshots
-
-![Light Theme](path-to-screenshot-light.png)
-![Dark Theme](path-to-screenshot-dark.png)
 
 ## Future Improvements
 
