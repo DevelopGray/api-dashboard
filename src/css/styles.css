@@ -1,0 +1,303 @@
+/* ========== Base Styles ========== */
+html,
+body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+}
+
+body>footer {
+  position: sticky;
+  top: 100vh;
+}
+
+main {
+  width: 100%;
+  padding-top: 4rem;
+}
+
+/* Footer Styling */
+.footer {
+  text-align: center;
+  padding: 0.625rem;
+  width: 100%;
+  flex-shrink: 0;
+  color: inherit !important;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 0.5rem;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+
+/* Typography and Content Styling */
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #3b82f6;
+}
+
+.card-title i {
+  color: #10b981;
+  margin-right: 0.5rem;
+}
+
+#weather-content,
+#image-content,
+#bitcoin-content,
+#quote-content {
+  font-size: 1rem !important;
+  color: inherit !important;
+}
+
+.module-container {
+  display: inline-block;
+  margin: 0.625rem;
+  vertical-align: top;
+  max-width: 18.75rem;
+}
+
+/* Image Module Styling */
+#image-module img {
+  max-width: 100%;
+  max-height: 12.5rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Close Button Styling */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.125rem;
+  color: #6b7280;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ef4444;
+}
+
+/* Row for Modules */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+/* Navbar Styling */
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0.3125rem rgba(255, 255, 255, 0.5);
+}
+
+/* Sortable Draggable Placeholder */
+.sortable-ghost {
+  opacity: 0.1;
+  background-color: #ececec;
+}
+
+/* Image Attribution Text */
+.imgBy {
+  padding-top: 1rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 48rem) {
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* ========== Theme Styles ========== */
+/* Light Theme */
+body.light-theme {
+  background-color: #f3f4f6 !important;
+  color: #111827 !important;
+}
+
+.navbar.light-theme {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid rgb(156.5219512195, 192.1951219512, 250.4780487805) !important;
+}
+
+.navbar.light-theme .navbar-brand,
+.navbar.light-theme .nav-link {
+  color: #ffffff !important;
+}
+
+.navbar.light-theme .nav-link:hover {
+  color: rgb(254.043902439, 254.3902439024, 254.956097561) !important;
+}
+
+/* Light Theme Card */
+.card.light-theme {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+/* Light Theme Modal */
+.light-theme .modal-content {
+  background-color: #ffffff !important;
+  color: #111827 !important;
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+}
+
+.light-theme .modal-header,
+.light-theme .modal-footer {
+  border-color: rgb(156.5219512195, 192.1951219512, 250.4780487805) !important;
+}
+
+.light-theme .modal-footer .btn-primary {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+}
+
+.light-theme .modal-footer .btn-primary:hover {
+  background-color: rgb(11.1512195122,
+      99.1219512195,
+      242.8487804878) !important;
+}
+
+.light-theme .modal-footer .btn-secondary {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.light-theme .modal-footer .btn-secondary:hover {
+  background-color: rgb(11.9402985075,
+      138.0597014925,
+      96.2686567164) !important;
+}
+
+.navbar.light-theme .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="white" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>') !important;
+}
+
+.footer.light-theme {
+  background-color: #3b82f6 !important;
+  color: #ffffff !important;
+  border-top: 1px solid rgb(156.5219512195, 192.1951219512, 250.4780487805) !important;
+}
+
+.footer.light-theme a {
+  color: #f9fafb !important;
+}
+
+.navbar.light-theme .navbar-toggler {
+  background-color: #565ceb;
+}
+
+/* Dark Theme */
+body.dark-theme {
+  background-color: #1f2937 !important;
+  color: #f9fafb !important;
+}
+
+.navbar.dark-theme {
+  background-color: #374151 !important;
+  color: #f9fafb !important;
+  border-bottom: 1px solid rgb(34.375, 40.625, 50.625) !important;
+}
+
+.navbar.dark-theme .navbar-brand,
+.navbar.dark-theme .nav-link {
+  color: #f9fafb !important;
+}
+
+.navbar.dark-theme .nav-link:hover {
+  color: rgb(123.375, 139.625, 165.625) !important;
+}
+
+/* Dark Theme Card */
+.card.dark-theme {
+  background-color: #374151 !important;
+  color: #f9fafb !important;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+
+/* Dark Theme Modal */
+.dark-theme .modal-content {
+  background-color: #374151 !important;
+  color: #f9fafb !important;
+  box-shadow: 0 0.25rem 0.375rem rgba(0, 0, 0, 0.15);
+}
+
+.dark-theme .modal-header,
+.dark-theme .modal-footer {
+  border-color: rgb(34.375, 40.625, 50.625) !important;
+}
+
+.dark-theme .modal-footer .btn-primary {
+  background-color: rgb(83.3804878049,
+      145.5487804878,
+      247.1195121951) !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .modal-footer .btn-primary:hover {
+  background-color: rgb(10.0317073171,
+      89.1707317073,
+      218.4682926829) !important;
+}
+
+.dark-theme .modal-footer .btn-secondary {
+  background-color: #10b981 !important;
+  color: #ffffff !important;
+}
+
+.dark-theme .modal-footer .btn-secondary:hover {
+  background-color: rgb(11.9402985075,
+      138.0597014925,
+      96.2686567164) !important;
+}
+
+.navbar.dark-theme .navbar-toggler-icon {
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"><path stroke="black" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"/></svg>') !important;
+}
+
+.navbar.dark-theme .navbar-toggler {
+  background-color: #6a6a79;
+}
+
+.footer.dark-theme {
+  background-color: #374151 !important;
+  color: #f9fafb !important;
+  border-top: 1px solid rgb(34.375, 40.625, 50.625) !important;
+}
