@@ -241,15 +241,26 @@ window.hideModule = function (moduleName) {
   }
 };
 
-// Sortable.js setup for drag-and-drop functionality in module layout
+// Initialize Sortable.js with drag handle
 document.addEventListener("DOMContentLoaded", () => {
   const container = document.querySelector(".row");
   Sortable.create(container, {
     animation: 150,
     ghostClass: "sortable-ghost",
+    handle: ".drag-handle", // Set drag handle
     onEnd: () => saveModuleOrder(),
   });
 });
+
+// Function to hide module with touch event compatibility
+window.hideModule = function (moduleName) {
+  const moduleElement = document.getElementById(`${moduleName}-module`);
+  if (moduleElement) {
+    moduleElement.style.display = "none";
+    document.getElementById(`${moduleName}ModuleToggle`).checked = false;
+    localStorage.setItem(`${moduleName}Module`, "false");
+  }
+};
 
 // Save module order after rearranging
 function saveModuleOrder() {

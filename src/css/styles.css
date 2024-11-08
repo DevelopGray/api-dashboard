@@ -84,6 +84,10 @@ main {
   margin: 0 auto;
 }
 
+#image-module p {
+  margin-top: 1rem;
+}
+
 /* Close Button Styling */
 .close-btn {
   position: absolute;
@@ -300,4 +304,36 @@ body.dark-theme {
   background-color: #374151 !important;
   color: #f9fafb !important;
   border-top: 1px solid rgb(34.375, 40.625, 50.625) !important;
+}
+
+/* Drag Handle Styling */
+.drag-handle {
+  cursor: grab;
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  font-size: 1.25rem;
+  color: #6b7280;
+}
+
+.drag-handle:hover {
+  color: #3b82f6;
+}
+
+/* Close Button Enhancement for Mobile */
+.close-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 0.5rem;
+  /* Increase touch area */
+}
+
+.close-btn:hover {
+  color: #ef4444;
 }
