@@ -79,7 +79,6 @@ async function displayWeather() {
   );
 
   if (weatherData) {
-    console.log(weatherData);
     // Step 3: Update the DOM with location and weather data
     weatherContent.innerHTML = `
         <h3>${location.city}, ${location.region}</h3>

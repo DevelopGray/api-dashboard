@@ -22,7 +22,7 @@ export async function fetchWeatherData(latitude, longitude) {
 
   try {
     const { data } = await axios.request(options);
-    console.log(data);
+
     return {
       location: {
         latitude: data.latitude,
