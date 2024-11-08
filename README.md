@@ -53,6 +53,7 @@ api-dashboard/
 ## Setup and Installation
 
 1. **Clone the repository**:
+
    ```bash
    git clone https://github.com/your-username/api-dashboard.git
    cd api-dashboard
@@ -67,6 +68,7 @@ api-dashboard/
 ## Usage
 
 - **Modules**:
+
   - Weather: Displays current weather based on IP location.
   - Image: Shows a random image from the Picsum Photos API.
   - Bitcoin: Shows the current Bitcoin price in USD.
@@ -77,7 +79,6 @@ api-dashboard/
   - Open settings by clicking "Settings" in the navbar.
   - Choose which modules to display by checking/unchecking the options.
   - Click "Save changes" to apply and save preferences.
-  
 - **Drag-and-Drop**: Rearrange modules by dragging them. The arrangement is saved in `localStorage`.
 
 ## Future Improvements
