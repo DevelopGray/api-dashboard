@@ -22,7 +22,7 @@ export async function fetchWeatherData(latitude, longitude) {
 
   try {
     const { data } = await axios.request(options);
-
+    console.log(data);
     return {
       location: {
         latitude: data.latitude,
@@ -31,12 +31,11 @@ export async function fetchWeatherData(latitude, longitude) {
         timezoneAbbreviation: data.timezone_abbreviation,
       },
       current: {
-        time: new Date(data.current.time), // Optional: Converts to date object
-        temperature: data.current.temperature_2m, // Fahrenheit temperature
+        temperature: data.current.temperature_2m, // Current temperature in Fahrenheit
         apparentTemperature: data.current.apparent_temperature, // Feels-like temperature
         humidity: data.current.relative_humidity_2m, // Humidity in percentage
         precipitation: data.current.precipitation, // Precipitation in inches
-        isDay: data.current.is_day === 1 ? "Day" : "Night", // Checks if it's daytime
+        isDay: data.current.is_day === 1 ? "Daytime" : "Nighttime", // Checks if it's daytime
       },
     };
   } catch (error) {

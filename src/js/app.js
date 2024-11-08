@@ -79,6 +79,7 @@ async function displayWeather() {
   );
 
   if (weatherData) {
+    console.log(weatherData);
     // Step 3: Update the DOM with location and weather data
     weatherContent.innerHTML = `
         <h3>${location.city}, ${location.region}</h3>
@@ -98,9 +99,9 @@ async function displayWeather() {
           weatherData.current.precipitation
         } inches</p>
         <p><i class="fas ${
-          weatherData.current.isDay === "1" ? "fa-sun" : "fa-moon"
+          weatherData.current.isDay == "Daytime" ? "fa-sun" : "fa-moon"
         }"></i> ${
-      weatherData.current.isDay === "1" ? "Daytime" : "Nighttime"
+      weatherData.current.isDay == "Daytime" ? "Daytime" : "Nighttime"
     }</p>
     `;
   } else {
