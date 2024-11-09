@@ -36,10 +36,10 @@
             <nav class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#" id="theme-toggle">Toggle Theme</a>
+                        <a class="nav-link" href="#" id="theme-toggle" aria-label="Toggle between light and dark theme">Toggle Theme</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal">Settings</a>
+                        <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#settingsModal" aria-label="Open settings modal">Settings</a>
                     </li>
                 </ul>
             </nav>
@@ -53,7 +53,7 @@
             <article class="col-md-4 mb-3">
                 <div class="card" id="weather-module">
                     <div class="drag-handle" aria-label="Drag to rearrange"><i class="fas fa-grip-lines"></i></div>
-                    <button class="close-btn" onclick="hideModule('weather')">×</button>
+                    <button class="close-btn" onclick="hideModule('weather')" aria-label="Remove Weather module">×</button>
                     <div class="card-body">
                         <h5 class="card-title">
                             <i class="fas fa-cloud-sun"></i> Weather
@@ -67,7 +67,7 @@
             <article class="col-md-4 mb-3">
                 <div class="card" id="image-module">
                     <div class="drag-handle" aria-label="Drag to rearrange"><i class="fas fa-grip-lines"></i></div>
-                    <button class="close-btn" onclick="hideModule('image')">×</button>
+                    <button class="close-btn" onclick="hideModule('image')" aria-label="Remove Image module">×</button>
                     <div class="card-body">
                         <h5 class="card-title">
                             <i class="fas fa-image"></i> Random Image
@@ -81,7 +81,7 @@
             <article class="col-md-4 mb-3">
                 <div class="card" id="bitcoin-module">
                     <div class="drag-handle" aria-label="Drag to rearrange"><i class="fas fa-grip-lines"></i></div>
-                    <button class="close-btn" onclick="hideModule('bitcoin')">×</button>
+                    <button class="close-btn" onclick="hideModule('bitcoin')" aria-label="Remove Bitcoin module">×</button>
                     <div class="card-body">
                         <h5 class="card-title">
                             <i class="fas fa-chart-line"></i> Bitcoin
@@ -95,7 +95,7 @@
             <article class="col-md-4 mb-3">
                 <div class="card" id="quotes-module">
                     <div class="drag-handle" aria-label="Drag to rearrange"><i class="fas fa-grip-lines"></i></div>
-                    <button class="close-btn" onclick="hideModule('quotes')">×</button>
+                    <button class="close-btn" onclick="hideModule('quotes')" aria-label="Remove Quotes module">×</button>
                     <div class="card-body">
                         <h5 class="card-title">
                             <i class="fas fa-quote-left"></i> Quotes
@@ -111,7 +111,7 @@
     <footer class="footer bg-dark text-light py-3 text-center">
         <p>
             &copy; 2024 My Personalized API Dashboard |
-            <a href="https://github.com/DevelopGray/" class="text-white">My Github</a>
+            <a href="https://github.com/DevelopGray/" class="text-white" aria-label="Visit my GitHub profile">My Github</a>
         </p>
     </footer>
 
